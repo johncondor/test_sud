@@ -105,7 +105,7 @@
       $.ajax({
         type: "GET",
         //YOUR TURN: Replace with csv export link
-        url: 'https://docs.google.com/spreadsheets/d/1amFTiYSZIiOQZYIJ95LgMQYDoOyHpBrVpXBP32Z839Q/edit#gid=0',
+        url: 'https://docs.google.com/spreadsheets/d/16YBD4195OmNNBPOv3LBEim6oQvWZpkRIV8PkS09pS7o/edit?usp=sharing',
         dataType: "text",
         success: function (csvData) { makeGeoJSON(csvData); }
       });
@@ -114,8 +114,8 @@
 
       function makeGeoJSON(csvData) {
         csv2geojson.csv2geojson(csvData, {
-          latfield: 'latitude',
-          lonfield: 'longitude',
+          latfield: 'Latitude',
+          lonfield: 'Longitude',
           delimiter: ','
         }, function (err, data) {
           map.on('load', function () {
@@ -131,7 +131,7 @@
               'paint': {
                 'circle-radius': 10,
                 'circle-color': "coral",
-				'circle-opacity':.5
+				'circle-opacity':0.5
               }
             });
 
