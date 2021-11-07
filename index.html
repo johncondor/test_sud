@@ -11,6 +11,11 @@
   <script src='https://npmcdn.com/csv2geojson@latest/csv2geojson.js'></script>
   <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
   <style>
+<div id='map'></div>
+<div id='console'>
+  <h1>Protests in Sudan post-Coup</h1>
+  <p>Data: <a href='https://sudanesearchive.org/'>Sudanese Archive</a> in Sudan, October 2021</p>
+</div>
     body {
       margin: 0;
       padding: 0;
@@ -76,6 +81,42 @@
 </head>
 
 <body>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+h1 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+h2 {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #2dc4b2;
+}
+
+#console {
+  position: absolute;
+  width: 240px;
+  margin: 10px;
+  padding: 10px 20px;
+  background-color: white;
+}
 
   <div id='map'></div>
   <script>
