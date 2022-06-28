@@ -79,7 +79,7 @@
         container: 'map', // container id
         style: 'mapbox://styles/mapbox/light-v10', // YOUR TURN: choose a style: https://docs.mapbox.com/api/maps/#styles
         center: [ 32.56,15.500556], // starting position [lng, lat]
-        zoom: 7,// starting zoom
+        zoom: 8,// starting zoom
         transformRequest: transformRequest });
 
  
@@ -88,7 +88,7 @@
       $.ajax({
         type: "GET",
         //YOUR TURN: Replace with csv export link
-        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT1bc7mkOMdxKO0NefquVbZ_UK7PMB66qziUCSaaWkMML4yf_Q4QGCDmo7zX31_oi5UMrtfBHRBd2p5/pub?gid=0&single=true&output=csv',
+        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRm9yIVmw1MWj9Jt0rrPz1B1dC--ln91P0UtTZR7qqJhe8hpDRDs7VQtkt2hbYlxq4TXJcCnZZbVMoN/pub?gid=0&single=true&output=csv',
         dataType: "text",
         success: function (csvData) { makeGeoJSON(csvData); }
       });
