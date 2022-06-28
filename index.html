@@ -73,13 +73,13 @@
         dataType: "text",
         success: function (csvData) { makeGeoJSON(csvData); }
       });
-      function makeGeoJSON(csvData) {
-        csv2geojson.csv2geojson(csvData, {
-          latfield: 'LAT',
-          lonfield: 'LONG',
-          delimiter: ','
-        }, function (err, data) {
-          map.on('load', function () {
+     // function makeGeoJSON(csvData) {
+      //  csv2geojson.csv2geojson(csvData, {
+      //    latfield: 'LAT',
+      //    lonfield: 'LONG',
+      //    delimiter: ','
+     //   }, function (err, data) {
+      //    map.on('load', function () {
 
             //Add the the layer to the map
             map.addLayer({
