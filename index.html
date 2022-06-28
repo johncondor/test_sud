@@ -54,26 +54,35 @@
           
 <body>
    
-        <div id='map'></div>
+    <div id='map'></div>
     <div id='console'>
-      <h1>Sudan Protest Archive</h1>
-      <p>Data: <a href='https://sudanesearchive.org/'> Sudanese Archive</a> </p>
+    <h1>Sudan Protest Archive</h1>
+    <p>Data: <a href='https://sudanesearchive.org/'> Sudanese Archive</a> </p>
     </div> 
    
 
    
 
-       <script>
-            mapboxgl.accessToken = 'pk.eyJ1Ijoic3RpbnNvbi1nZW9ncmFwaGl4IiwiYSI6ImNrdml1a20xc2NvY2Uyd3E2ejllY3k3ZGEifQ.cd9Z7ukoclCnaofc4-y4qA'; //Mapbox token 
-    var map = new mapboxgl.Map({
-      container: 'map', // container id
-      style: 'mapbox://styles/mapbox/light-v10', // YOUR TURN: choose a style: https://docs.mapbox.com/api/maps/#styles
-      center: [ 32.56,15.500556], // starting position [lng, lat]
-      zoom: 7,// starting zoom
-      transformRequest: transformRequest
-    });
+    <script>
+        var transformRequest = (url, resourceType) => {
+      var isMapboxRequest =
+        url.slice(8, 22) === "api.mapbox.com" ||
+        url.slice(10, 26) === "tiles.mapbox.com";
+      return {
+        url: isMapboxRequest
+          ? url.replace("?", "?pluginName=sheetMapper&")
+          : url
+      };
+    };
+        mapboxgl.accessToken = 'pk.eyJ1Ijoic3RpbnNvbi1nZW9ncmFwaGl4IiwiYSI6ImNrdml1a20xc2NvY2Uyd3E2ejllY3k3ZGEifQ.cd9Z7ukoclCnaofc4-y4qA'; //Mapbox token 
+        var map = new mapboxgl.Map({
+        container: 'map', // container id
+        style: 'mapbox://styles/mapbox/light-v10', // YOUR TURN: choose a style: https://docs.mapbox.com/api/maps/#styles
+        center: [ 32.56,15.500556], // starting position [lng, lat]
+        zoom: 7,// starting zoom
+        transformRequest: transformRequest });
     </script>
-  </body>
+ 
 
     $(document).ready(function () {
       $.ajax({
