@@ -9,17 +9,11 @@
         <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
         
         
-        <body>
-            <div id='map'></div>
-        <div id='console'>
-          <h1>Sudan Protest Archive</h1>
-          <p>Data: <a href='https://sudanesearchive.org/'> Sudanese Archive</a> </p>
-        </div> 
-         </body>
+       
 
-    </head>
+    
 
-    <style>
+        <style>
         body {
             margin: 0;
             padding: 0;
@@ -56,9 +50,16 @@
             background-color: rgb(255, 255, 255);
 }
           </style>
-          </body>
-
-
+     </head>
+          
+<body>
+   
+        <div id='map'></div>
+    <div id='console'>
+      <h1>Sudan Protest Archive</h1>
+      <p>Data: <a href='https://sudanesearchive.org/'> Sudanese Archive</a> </p>
+    </div> 
+   
 
    
 
@@ -72,6 +73,7 @@
       transformRequest: transformRequest
     });
     </script>
+  </body>
 
     $(document).ready(function () {
       $.ajax({
