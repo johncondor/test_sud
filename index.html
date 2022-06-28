@@ -7,7 +7,16 @@
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <script src='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
         <link href='https://api.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
-        <style>
+        
+        
+        <body>
+            <div id='map'></div>
+        <div id='console'>
+          <h1>Sudan Protest Archive</h1>
+          <p>Data: <a href='https://sudanesearchive.org/'> Sudanese Archive</a> </p>
+        </div>
+    
+    <style>
         body {
             margin: 0;
             padding: 0;
@@ -44,16 +53,11 @@
             background-color: white;
 }
           </style>
+          </body>
 
     </head>
 
-    <body>
-        <div id='map'></div>
-    <div id='console'>
-      <h1>Sudan Protest Archive</h1>
-      <p>Data: <a href='https://sudanesearchive.org/'> Sudanese Archive</a> </p>
-    </div>
-</body>
+   
 
        <script>
             mapboxgl.accessToken = 'pk.eyJ1Ijoic3RpbnNvbi1nZW9ncmFwaGl4IiwiYSI6ImNrdml1a20xc2NvY2Uyd3E2ejllY3k3ZGEifQ.cd9Z7ukoclCnaofc4-y4qA'; //Mapbox token 
