@@ -1,3 +1,7 @@
+const map = new mapboxgl.Map({
+    container: 'map',
+     
+})
 const config = {
     style: "mapbox://styles/mapbox/light-v10",
     accessToken:
@@ -5,11 +9,16 @@ const config = {
     CSV: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT1bc7mkOMdxKO0NefquVbZ_UK7PMB66qziUCSaaWkMML4yf_Q4QGCDmo7zX31_oi5UMrtfBHRBd2p5/pub?gid=0&single=true&output=csv',
     center: [32.56,15.500556],
     zoom: 5,
+    scrollzoom: true,
     title: "Sudan Protest Tracker",
     description:
       "This website reports the date, relative size, and reaction to anti-coup protests in Sudan.",
     sideBarInfo: ["City", "Date", "Action_type"],
     popupInfo: ["City"],
+    }
+
+{
+
     filters: [
       {
         type: "dropdown",
