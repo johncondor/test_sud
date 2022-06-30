@@ -15,10 +15,6 @@ const config = {
       "This website reports the date, relative size, and reaction to anti-coup protests in Sudan.",
     sideBarInfo: ["City", "Date", "Action_type"],
     popupInfo: ["City"],
-    }
-
-{
-
     filters: [
       {
         type: "dropdown",
