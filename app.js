@@ -362,7 +362,7 @@ filters(config.filters);
 removeFiltersButton();
 
 const geocoder = new MapboxGeocoder({
-  accessToken: mapboxgl.accessToken ='pk.eyJ1Ijoic3RpbnNvbi1nZW9ncmFwaGl4IiwiYSI6ImNrdml1a20xc2NvY2Uyd3E2ejllY3k3ZGEifQ.cd9Z7ukoclCnaofc4-y4qA', // Set the access token
+  accessToken: mapboxgl.accessToken =sk.eyJ1Ijoic3RpbnNvbi1nZW9ncmFwaGl4IiwiYSI6ImNsNWlhbzk3dzA2OHozZHFxMGNiejV5YnAifQ.iyXaAF662TA1OCdRMefQJw , // Set the access token
   mapboxgl: mapboxgl, // Set the mapbox-gl instance
   marker: true, // Use the geocoder's default marker style
   zoom: 11,
@@ -414,7 +414,7 @@ map.on("load", function () {
     console.log("ready");
     $.ajax({
       type: "GET",
-      url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT1bc7mkOMdxKO0NefquVbZ_UK7PMB66qziUCSaaWkMML4yf_Q4QGCDmo7zX31_oi5UMrtfBHRBd2p5/pub?gid=0&single=true&output=csv' config.CSV,
+      url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT1bc7mkOMdxKO0NefquVbZ_UK7PMB66qziUCSaaWkMML4yf_Q4QGCDmo7zX31_oi5UMrtfBHRBd2p5/pub?gid=0&single=true&output=csv', config.CSV,
       dataType: "text",
       success: function (csvData) {
         makeGeoJSON(csvData);
