@@ -1,4 +1,6 @@
-/* eslint-disable strict */
+'use strict';
+
+//* eslint-disable strict */
 mapboxgl.accessToken = config.accessToken;
 const columnHeaders = config.sideBarInfo;
 
