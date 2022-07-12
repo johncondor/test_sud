@@ -1,3 +1,5 @@
+'use strict';
+
 const map = new mapboxgl.Map({
     container: 'map',
      
