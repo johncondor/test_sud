@@ -1,9 +1,10 @@
 'use strict';
 
-const map = new mapboxgl.Map({
-    container: 'map',
+// eslint-disable-next-line no-unused-vars
+//const map = new mapboxgl.Map({
+//    container: 'map',
      
-})
+//})
 const config = {
     style: "mapbox://styles/mapbox/light-v10",
     accessToken:
