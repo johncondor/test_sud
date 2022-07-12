@@ -5,7 +5,7 @@ const map = new mapboxgl.Map({
 const config = {
     style: "mapbox://styles/mapbox/light-v10",
     accessToken:
-    pk.eyJ1Ijoic3RpbnNvbi1nZW9ncmFwaGl4IiwiYSI6ImNrdml1a20xc2NvY2Uyd3E2ejllY3k3ZGEifQ.cd9Z7ukoclCnaofc4-y4qA,
+    'pk.eyJ1Ijoic3RpbnNvbi1nZW9ncmFwaGl4IiwiYSI6ImNrdml1a20xc2NvY2Uyd3E2ejllY3k3ZGEifQ.cd9Z7ukoclCnaofc4-y4qA',
     CSV: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT1bc7mkOMdxKO0NefquVbZ_UK7PMB66qziUCSaaWkMML4yf_Q4QGCDmo7zX31_oi5UMrtfBHRBd2p5/pub?gid=0&single=true&output=csv',
     center: [32.56,15.500556],
     zoom: 5,
