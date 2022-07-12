@@ -414,7 +414,7 @@ map.on("load", function () {
     console.log("ready");
     $.ajax({
       type: "GET",
-      url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT1bc7mkOMdxKO0NefquVbZ_UK7PMB66qziUCSaaWkMML4yf_Q4QGCDmo7zX31_oi5UMrtfBHRBd2p5/pub?gid=0&single=true&output=csv', config.CSV,
+      url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT1bc7mkOMdxKO0NefquVbZ_UK7PMB66qziUCSaaWkMML4yf_Q4QGCDmo7zX31_oi5UMrtfBHRBd2p5/pub?gid=0&single=true&output=csv', config,CSV,
       dataType: "text",
       success: function (csvData) {
         makeGeoJSON(csvData);
