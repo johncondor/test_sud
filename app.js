@@ -1,6 +1,4 @@
-'use strict';
-
-//* eslint-disable strict */
+/* eslint-disable strict */
 mapboxgl.accessToken = config.accessToken;
 const columnHeaders = config.sideBarInfo;
 
@@ -207,7 +205,7 @@ function createFilterObject(filterSettings) {
       checkboxFilters.push(keyValues);
     }
     if (filter.type === "dropdown") {
-      columnHeader = filter.columnHeader;
+      columnHeader = "City";
       listItems = filter.listItems;
 
       const keyValues = {};
