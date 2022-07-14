@@ -24,7 +24,7 @@ const config = {
         title: "City",
         columnHeader: "City",
         listItems: [
-            ""Khartoum", Aba Island","Abri","Al Agda Almagharba","Al Daein","Al Doweim","Al Fashir","Al Foula","Al Gabalia","Al Geteina","Al Hasahisa","Al Manaqil","al-bargeeg","Al-Butana University","Al-Damar","Al-Gadarif","Al-Geneina","Argo","Atbara","babanusa","Bahri","Barah","Damazin","Dinder","Dongola","El-Obeid","Er Roseires","Ghubaysh","Halfa","Kabkabya","Kadugli","Karima","Kas","Kassala","Kerma","Khashm Al-Girba","Kinana","Kosti","Kosti","Madani","Marawi","Muglad","New Halfa","Nuhood","Nyala","Old Umm Talha","Omdurman","Port Sudan","Rabak","Rufaa City","Shandi","Sinja","Sinnar","Tandalti","Umm Ruwaba","Yabus","Zalingy"
+            "Khartoum", "Aba Island","Abri","Al Agda Almagharba","Al Daein","Al Doweim","Al Fashir","Al Foula","Al Gabalia","Al Geteina","Al Hasahisa","Al Manaqil","al-bargeeg","Al-Butana University","Al-Damar","Al-Gadarif","Al-Geneina","Argo","Atbara","babanusa","Bahri","Barah","Damazin","Dinder","Dongola","El-Obeid","Er Roseires","Ghubaysh","Halfa","Kabkabya","Kadugli","Karima","Kas","Kassala","Kerma","Khashm Al-Girba","Kinana","Kosti","Kosti","Madani","Marawi","Muglad","New Halfa","Nuhood","Nyala","Old Umm Talha","Omdurman","Port Sudan","Rabak","Rufaa City","Shandi","Sinja","Sinnar","Tandalti","Umm Ruwaba","Yabus","Zalingy"
         ],
       },
       {
