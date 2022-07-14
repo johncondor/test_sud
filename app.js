@@ -362,7 +362,7 @@ filters(config.filters);
 removeFiltersButton();
 
 const geocoder = new MapboxGeocoder({
-  accessToken: mapboxgl.accessToken =pk.eyJ1Ijoic3RpbnNvbi1nZW9ncmFwaGl4IiwiYSI6ImNrdml1a20xc2NvY2Uyd3E2ejllY3k3ZGEifQ.cd9Z7ukoclCnaofc4-y4qA , // Set the access token
+  accessToken: mapboxgl.accessToken ="pk.eyJ1Ijoic3RpbnNvbi1nZW9ncmFwaGl4IiwiYSI6ImNrdml1a20xc2NvY2Uyd3E2ejllY3k3ZGEifQ.cd9Z7ukoclCnaofc4-y4qA" , // Set the access token
   mapboxgl: mapboxgl, // Set the mapbox-gl instance
   marker: true, // Use the geocoder's default marker style
   zoom: 11,
