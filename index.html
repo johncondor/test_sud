@@ -11,11 +11,6 @@
   <script src='https://npmcdn.com/csv2geojson@latest/csv2geojson.js'></script>
   <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
   <style>
-<div id='map'></div>
-<div id='console'>
-  <h1>Protests in Sudan post-Coup</h1>
-  <p>Data: <a href='https://sudanesearchive.org/'>Sudanese Archive</a> in Sudan, October 2021</p>
-</div>
     body {
       margin: 0;
       padding: 0;
@@ -81,42 +76,6 @@
 </head>
 
 <body>
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
-
-#map {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-}
-
-h1 {
-  font-size: 20px;
-  line-height: 30px;
-}
-
-h2 {
-  font-size: 14px;
-  line-height: 20px;
-  margin-bottom: 10px;
-}
-
-a {
-  text-decoration: none;
-  color: #2dc4b2;
-}
-
-#console {
-  position: absolute;
-  width: 240px;
-  margin: 10px;
-  padding: 10px 20px;
-  background-color: white;
-}
 
   <div id='map'></div>
   <script>
@@ -137,8 +96,8 @@ a {
     var map = new mapboxgl.Map({
       container: 'map', // container id
       style: 'mapbox://styles/mapbox/light-v10', // YOUR TURN: choose a style: https://docs.mapbox.com/api/maps/#styles
-      center: [ 32.56,15.500556], // starting position [lng, lat]
-      zoom: 7,// starting zoom
+      center: [32.56,15.500556], // starting position [lng, lat]
+      zoom: 5,// starting zoom
       transformRequest: transformRequest
     });
 
@@ -146,7 +105,7 @@ a {
       $.ajax({
         type: "GET",
         //YOUR TURN: Replace with csv export link
-        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vT1bc7mkOMdxKO0NefquVbZ_UK7PMB66qziUCSaaWkMML4yf_Q4QGCDmo7zX31_oi5UMrtfBHRBd2p5/pub?gid=0&single=true&output=csv',
+        url: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRm9yIVmw1MWj9Jt0rrPz1B1dC--ln91P0UtTZR7qqJhe8hpDRDs7VQtkt2hbYlxq4TXJcCnZZbVMoN/pub?gid=328383821&single=true&output=csv',
         dataType: "text",
         success: function (csvData) { makeGeoJSON(csvData); }
       });
@@ -170,8 +129,9 @@ a {
                 'data': data
               },
               'paint': {
-                'circle-radius': 10,
-                'circle-color': "coral"
+                'circle-radius': ['get','Count'],
+                'circle-opacity':0.8
+                'circle-color': "red"
               }
             });
 
@@ -184,7 +144,7 @@ a {
               //set popup text
               //You can adjust the values of the popup to match the headers of your CSV.
               // For example: e.features[0].properties.Name is retrieving information from the field Name in the original CSV.
-              var description = `<h3>` + e.features[0].properties.Location + `</h3>` + `<h4>` + `<b>` + `Location` + `</b>` + e.features[0].properties.Location `</h4>` + `<h4>` + `<b>`;
+              var description = `<h3>` + e.features[0].properties.City + `</h3>` + `<h4>` + `<b>` + `City` + `</b>` + e.features[0].properties.Location `</h4>` + `<h4>` + `<b>`;
 
               // Ensure that if the map is zoomed out such that multiple
               // copies of the feature are visible, the popup appears
